@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Basics */
+
+body {
+	font-family: 'Inter', sans-serif;
+	background: #EDEDED;
+}
+
+.hpccards-list, .swagbox-list, .checking-cards, .checked,
+.connected-account, .section-content.connected,
+.burn-it, .burn-box, .allowing-burning, .allowed-mints,
+.burning-cards, .alert, .off-indicator, .network.eth {
+	display: none;
+}
+
+/*.hpccards-list {
+	display: block;
+}*/
+
+h2 {
+  font-weight: 800;
+  font-style: italic;
+}
+
+h5 {
+  font-size: 14px;
+  color: #6f6f6f;
+  font-style: italic;
+  margin-top: 10px;
+  text-transform: unset;
+  font-weight: 400;
+}
+
+button.btn {
+  border-radius: 0px;
+  height: 50px;
+  padding: 0px 20px;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.message {
+  color: #D1D1D1;
+  font-size: 21px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Checkbox */
+
+.form-check-label {
+	color: #bcbcbc;
+}
+
+/* Nav */
+
+nav {
+	height: 100px;
+	background:  white;
+}
+
+nav .navbar-brand {
+	width: 200px;
+  display: block;
+}
+
+nav .navbar-brand img {
+  height: 55px;
+}
+
+nav .website-title {
+	margin: 0;
+}
+
+nav .blockchain-account {
+	width: 200px;
+	text-align: right;
+}
+
+nav .blockchain-account .connected-account .network-indicator {
+	background: #ececec;
+  display: inline-block;
+  position: absolute;
+  margin-left: -62px;
+  margin-top: 1px;
+  width: 50px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+nav .blockchain-account .connected-account .on-indicator,  nav .blockchain-account .connected-account .off-indicator{
+	border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: #3aa23a;
+  margin-top: 9px;
+  margin-right: 7px;
+}
+
+nav .blockchain-account .connected-account .off-indicator {
+	background: #cd3636;
+}
+
+nav .blockchain-account .connected-account .network {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  margin-left: -40px;
+  margin-top: 3px;
+}
+nav .blockchain-account .connected-account .network.polygon {
+  width: 20px;
+  margin-left: -42px;
+  margin-top: 5px;
+}
+
+nav .blockchain-account .connected-account .network img {
+	width:  100%;
+}
+
+nav .blockchain-account .connected-account a {
+  text-overflow: ellipsis;
+  max-width: 160px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+}
+
+/* Titles */
+
+section#mint {
+  margin-top: 40px;
+}
+section#burn {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+section#mint .section-title {
+    opacity: 80%;
+}
+
+section .container.section-content {
+  margin-top: 15px;
+  min-height: 83px;
+  background: white;
+  border-top: 4px solid black;
+  padding: 30px;
+}
+
+section .section-title .title-content {
+	position: absolute;
+  margin-top: -58px;
+  margin-left: 20px;
+}
+
+section .section-title .title-content h2 {
+  color: white;
+  margin-bottom: -5px;
+  font-size: 24px;
+}
+
+section .section-title .title-content .subtitle {
+  color: gray;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+section#mint .section-title .title-content .subtitle {
+  color: #C9E5FF;
+}
+section#burn .section-title .title-content .subtitle {
+  color: #FFC2C2;
+}
+
+section#mint .container.section-content {
+	border-top-color: #566B9E;
+}
+section#burn .container.section-content {
+	border-top-color: #EB653C;
+}
+
+h4 {
+  margin-top: 50px;
+  font-weight: 800;
+  font-style: italic;
+  margin-bottom: 20px;
+  font-size: 27px;
+}
+
+.minting-objects {
+    display: flex;
+}
+
+.hpcboxes {
+  margin-right: 50px;
+}
+
+.no-mints, .allowed-mints {
+  font-weight: 800;
+  font-style: italic;
+}
+
+.no-mints h3, .allowed-mints h3 {
+    font-weight: 800;
+    font-size: 24px;
+    color: #9DB4E1;
+    margin-bottom: 0px;
+}
+.no-mints .subtitle, .allowed-mints .subtitle {
+    color: #B4C6E8;
+}
+
+.allowed-mints h3 {
+  color: #5e85d7;
+}
+
+#mint h4 {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #5d85d7;
+}
+
+#mint .amount {
+    font-size: 30px;
+    color: #9cb4e1;
+    margin-right: 20px;
+}
+
+
+#mint .amount.no-mint {
+    font-size: 30px;
+    color: #c9c9c9;
+}
+
+#mint img.no-mint {
+  opacity: 0.6;
+}
+
+#mint h5 {
+    color: #9b9b9b;
+    margin-top: -18px;
+    margin-bottom: 18px;
+}
+
+.allowed-mints img {
+   max-width: 107px;
+}
+
+.alert {
+	margin-top: 10px;
+}
+.alert button.btn-close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+h4.alert-heading {
+    margin-top: 0px;
+    font-size: 23px;
+}
+
+/* List styling */
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.list .card {
+  width: 11%;
+  margin-right: 5%;
+  margin-bottom: 20px;
+  border: 1px solid #e2e2e2;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+.list .card.selected {
+    opacity: 70%;
+}
+
+.number {
+  color: #e8513a;
+  margin-left: 7px;
+  margin-right: 7px;
+  font-weight: 900;
+}
+
+.list .card .token-id {
+	font-size: 10px;
+	color: #bcbcbc;
+	display: none;
+}
+
+.list .card .token-id .badge{
+	font-size: 7px;
+}
+
+.burn-it {
+  position: absolute;
+  top: 0px;
+  background: #511717bd;
+  height: 100%;
+  width: 100%;
+  padding-top: 29%;
+  text-align: center;
+  font-size: 70px;
+}
+
+.swagbox-list .burn-it {
+	padding-top: 12%;
+}
+
+
+.card-selected {
+  position: absolute;
+  margin-left: 20px;
+  color: #e8513a;
+  background: #f8d7cd;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  padding-right: 3px;
+  margin-top: -4px;
+}
+
+.minting-address h4 img {
+    position: absolute;
+    margin-left: 14px;
+}
+
+.minting-address h5 {
+    margin-top: -15px;
+}
+
+
+input.eth-address {
+  margin-bottom: 50px;
+  background: #F0EEEE;
+  border: none;
+  line-height: 40px;
+  width: 525px;
+  padding: 5px 15px;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 800;
+  font-style: italic;
+  color: #212529;
+}
+
+input.eth-address::placeholder {
+  color: #c5c5c5;
+}

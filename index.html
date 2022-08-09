@@ -1,0 +1,160 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HPC Claim Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="/img/logo.svg" alt="" class="d-inline-block align-text-top">
+        </a>
+
+        <h2 class="website-title">THE BURNIIING</h2>
+        
+        <div class="blockchain-account">
+          <button class="connect-account btn btn-dark" type="button">CONNECT</button>
+          <div class="connected-account">
+            <a class="network-indicator">
+              <span class="on-indicator"></span>
+              <span class="off-indicator"></span>
+              <span class="network polygon"><img src="/img/polygon.svg"></span>
+              <span class="network eth"><img src="/img/eth.svg"></span>
+            </a>
+            <a class="address">Ox...</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+
+      <section id="mint">
+        <div class="section-title">
+          <img src="/img/mint-title.svg">
+          <div class="title-content">
+            <h2>MINT</h2>
+            <span class="subtitle">LIVE 18TH AUG.</span>
+          </div>
+        </div>
+
+        <div class="container section-content not-connected">
+          <div class="message">CONNECT YOUR POLYGON ACCOUNT</div>
+        </div>
+        <div class="container section-content connected">
+          <div class="no-mints">
+            <h3>NO MINTING SLOTS FOR THIS ADDRESS</h3>
+            <span class="subtitle">BURN CARDS FOR THIS ADDRESS TO ADD SLOTS</span>
+          </div>
+
+          <div class="allowed-mints">
+            <h3>YOUR CURRENT MINTING SLOTS</h3>
+            <span class="subtitle">(MINTING ISN'T LIVE YET, THIS IS FOR VISUALISATION)</span>
+
+            <div class="minting-objects">
+              <div class="hpcboxes">
+                <h4>HPC Box</h4>
+                <h5>Each box correspond to a unique Hot Potato</h5>
+                <div class="number">
+                  <span class="amount no-mint">x0</span>
+                  <img class="no-mint" src="/img/hpc-box.png">
+                </div>
+              </div>
+
+              <div class="swagnyc">
+                <h4>NYC Swagbox</h4>
+                <h5>Each box correspond to a unique NFT NYC wearable</h5>
+                <div class="number">
+                  <span class="amount no-mint">x0</span>
+                  <img class="no-mint" src="/img/swag-box.png">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <section id="burn">
+        <div class="section-title">
+          <img src="/img/burn-title.svg">
+          <div class="title-content">
+            <h2>BURN YOUR HPC CARDS</h2>
+            <span class="subtitle">UNTIL 12TH SEPT.</span>
+          </div>
+        </div>
+
+        <div class="container section-content not-connected">
+          <div class="message">CONNECT YOUR POLYGON ACCOUNT</div>
+        </div>
+        <div class="container section-content connected">
+          <button class="check-cards btn btn-dark" type="button" disabled>Check cards</button>
+          <button class="checking-cards btn btn-dark" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Checking...
+          </button>
+          <h5>Check the cards you can claim on your Polygon account</h5>
+          
+          <div class="hpccards-list">
+            <h4>HPC Claim Cards (<span class="number"></span>)</h4>
+            <div class="list">
+            </div>
+          </div>
+          <br>
+          <div class="swagbox-list">
+            <h4>HPC SwagBox (<span class="number"></span>)</h4>
+            <div class="list">
+            </div>
+          </div>
+        
+          <div class="burn-box">
+            <div class="card-selection">
+              <h4>Cards selected for burning: <span class="card-selected"></span></h4>
+            </div>
+
+            <div class="minting-address">
+              <h4>Minting address on ethereum <img src="/img/eth.svg"></h4>
+              <h5>(if none is added, current polygon address will be chosen as minting address)</h5>
+              <input class="eth-address" placeholder="0x.." type="text" name="">
+            </div>
+
+            <button class="allow-burning btn btn-primary" type="button">Allow burning</button>
+            <button class="allowing-burning btn btn-primary" type="button">
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              Allowing...
+            </button>
+            <button class="burn-cards btn btn-danger" type="button" disabled>Burn selected cards 🔥</button>
+            <button class="burning-cards btn btn-danger" type="button">
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              Burning cards 🔥🔥🔥
+            </button>
+
+            <div class="alert burn-ok alert-dark" role="alert">
+              <h4 class="alert-heading">Burn Complete!</h4>
+              You completed the burn of your cards.
+              <br> You can now check the allowed mints for the corresponding addess.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+            </div>
+            <div class="alert burn-ko alert-danger" role="alert">
+              <h4 class="alert-heading">Burn Failed</h4>
+              Verify your network or the account the burn is been done with.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+            </div>
+          </div>
+        </div>
+      </section>      
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/getCards.js"></script>
+    <script type="text/javascript" src="js/burnCards.js"></script>
+  </body>
+</html>
