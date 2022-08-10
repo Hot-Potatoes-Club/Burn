@@ -25,6 +25,7 @@ let userAccount = "";
 let userCards = {'hpc_cards':[], 'swagbox_cards':[]};
 let currentAccount;
 let selectedCards = [];
+let burnIsAllowed = false;
 
 // Check Metamask
 if (typeof window.ethereum !== 'undefined') {
@@ -81,7 +82,9 @@ function toggleSelection(element) {
     $('.card-selected').html(selectedCards.length);
     if (selectedCards.length == 0) {$('.burn-cards').attr('disabled', 'disabled');;}
   } else {
-    if (selectedCards.length == 0) {$('.burn-cards').removeAttr("disabled");}
+    if (selectedCards.length == 0 && burnIsAllowed) {
+      $('.burn-cards').removeAttr("disabled");
+    }
     selectedCards.push($(element).data("tokenid"));
     console.log(selectedCards);
     $(element).addClass("selected");
@@ -235,6 +238,7 @@ async function displayCards(userCards) {
   let approvalStatus = await checkApprovalStatus();
   if (approvalStatus) {
     $(".allow-burning").hide();
+    burnIsAllowed = true;
   }
 
   $('.eth-address').attr('placeholder',currentAccount);

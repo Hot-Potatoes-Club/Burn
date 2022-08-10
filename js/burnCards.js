@@ -8,6 +8,7 @@ async function allowBurn() {
     console.log(result);
     $(".allowing-burning").hide();
     $('.burn-cards').removeAttr("disabled");
+    burnIsAllowed = true;
   }
   catch(error){
     console.log("CAN'T ALLOW");
